@@ -9,6 +9,10 @@ export default function Router() {
           path="/"
           element={<Home />}
         />
+        <Route
+          path="/:skill"
+          element={<Home />}
+        />
       </Routes>
     </HashRouter>
   )

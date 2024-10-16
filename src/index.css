@@ -28,3 +28,12 @@ body{
   );
   font-size: 1.25rem
 }
+
+.reactP {
+  font-family: "Heavitas";
+  font-size: 1.5rem;
+}
+
+a{
+  cursor: pointer;
+}

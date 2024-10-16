@@ -4,7 +4,6 @@ import ContactForm from './ContactForm'
 describe('ContactForm', () => {
   it('should', () => {
     render(<ContactForm />)
-    const button  = screen.getByRole("button")
-    expect(button).toBeInTheDocument
-  })
+    expect(screen.getByRole("button")).toBeInTheDocument()
+  });
 })

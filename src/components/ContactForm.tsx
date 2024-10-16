@@ -1,120 +1,152 @@
-import { FormEvent, useState } from 'react';
-import { contactButtonStyle, contactInputStyle, contactLabelStyle } from "@/constants/contactClasses"
+import { ChangeEvent, FormEvent, useState } from 'react';
+import { contactButtonStyle, contactInputStyle, contactLabelStyle } from "@/constants/styleClasses"
 import ReCAPTCHA from 'react-google-recaptcha';
 import useRecaptcha from '@/hooks/useRecaptcha';
-import { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY, RECAPTCHA_SITE } from '@/constants/email'
-import emailjs from '@emailjs/browser';
+import { sendEmail } from '@/lib/sendEmail';
+import { RECAPTCHA_SITE } from '@/constants/email';
+import { useCookies } from 'react-cookie';
 
+interface InputValType {
+  user_name: boolean;
+  user_email: boolean;
+  message: boolean;
+}
 
 export default function ContactForm() {
   const { recaptchaRef, handleRecaptcha } = useRecaptcha();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [stateMessage, setStateMessage] = useState<string | null>(null);
+  const [cookies, setCookie, removeCookie] = useCookies(['contactSet']);
 
-  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
-    console.log(e.currentTarget["user_name"])
+  const [inputValidation, setInputValidation] = useState<InputValType>({
+    user_name: false,
+    user_email: false,
+    message: false,
+  });
+  const [stateMessage, setStateMessage] = useState<string | null>(null);
+  const [stateWarning, setStateWarning] = useState<string | null>(null);
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setInputValidation({
+      ...inputValidation,
+      [event.currentTarget.name]: false
+    })
+  }
+
+  const handleSendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.persist();
     e.preventDefault();
-    setIsSubmitting(true)
-    emailjs
-      .sendForm(
-        REACT_APP_SERVICE_ID,
-        REACT_APP_TEMPLATE_ID,
-        e.currentTarget,
-        REACT_APP_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setStateMessage(`Message sent, Thank you ${e.currentTarget}`)
-          setIsSubmitting(false)
-        },
-        (error) => {
-          setStateMessage('Something went wrong, please try again later');
-          console.error(error)
-          setIsSubmitting(false);
-          setTimeout(() => {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
-        }
-      );
 
-    // Clears the form after sending the email
-    e.currentTarget.reset();
-  };
+    const validateInputValue: InputValType = {
+      user_name: false,
+      user_email: false,
+      message: false
+    }
+    // Handle validation 
+    Object.keys(validateInputValue).forEach(k => {
+      const key = k as keyof InputValType
+      if (e.currentTarget[key].value == "") {
+        validateInputValue[key] = true
+      }
+    });
 
+    setInputValidation(validateInputValue)
+
+    if (!(validateInputValue.message || validateInputValue.user_email || validateInputValue.user_name)) {
+      const formSent = await sendEmail({ e, setIsSubmitting, setStateMessage, setStateWarning })
+      if (formSent) {
+        // set cookie
+        setCookie("contactSet", "true")
+      }
+    }
+  }
   return (
-    <form onSubmit={sendEmail} >
-      <div className="grid grid-cols-1 sm:p-0 sm:pt-3 p-3 gap-x-8 gap-y-6 pt-3 sm:grid-cols-2">
+    <form onSubmit={handleSendEmail} >
+      <div className="grid grid-cols-1 xl:p-0 sm:pt-3 p-5 gap-x-8 gap-y-6 xl:pt-3 min-h-80 sm:grid-cols-2">
         <div>
           <h2 className="font-Heavitas">Contact Me</h2>
-          <p>To request an resume/CV or any other questions please fill out the contact form!
-          </p>
-          {stateMessage && <p>{stateMessage}</p>}
+          {!cookies.contactSet && <p>To request a resume/CV or any other enquires please fill out the contact form!
+          </p>}
+
+          {stateWarning && <p className="border-4 w-full min-h-20 mt-5 border-red-600 text-black text-xl p-5 bg-white">{stateWarning}</p>}
+          {stateMessage && <p className="border-4 w-full min-h-20 mt-5 border-cyan-line text-black text-xl p-5 bg-white mb-10">{stateMessage}</p>}
+          {(cookies.contactSet && !stateMessage) &&
+            <>
+              <p>Message recieved, please wait for a response shortly</p>
+              <button className={contactButtonStyle} onClick={() => {
+                removeCookie("contactSet")
+              }}>Send another</button>
+            </>
+          }
         </div>
-        <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2">
-            <div>
-              <label htmlFor="user-name" className={contactLabelStyle}>
-                Name:
-              </label>
-              <div className="mt-2.5 mb-2.5 pr-3">
-                <input
-                  id="user-name"
-                  name="user_name"
-                  type="text"
-                  autoComplete="given-name"
-                  className={contactInputStyle}
-                />
+        {(!stateMessage && !cookies.contactSet) &&
+          <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2">
+              <div>
+                <label htmlFor="user-name" className={contactLabelStyle}>
+                  Name: {inputValidation.user_name && <span className='text-red-600'> **Required field**</span>}
+                </label>
+                <div className="mt-2.5 mb-2.5 pr-0 sm:pr-3">
+                  <input
+                    id="user-name"
+                    name="user_name"
+                    onChange={handleInputChange}
+                    type="text"
+                    autoComplete="given-name"
+                    className={`${contactInputStyle} ${inputValidation.user_name && `border-red-600 border-2`}`}
+                  />
+                </div>
+
+              </div>
+              <div>
+                <label htmlFor="email" className={contactLabelStyle}>
+                  Email: {inputValidation.user_email && <span className='text-red-600'> **Required field**</span>}
+                </label>
+                <div className="mt-2.5 mb-2.5">
+                  <input
+                    id="user-email"
+                    name="user_email"
+                    type="text"
+                    autoComplete="email"
+                    onChange={handleInputChange}
+                    className={`${contactInputStyle} ${inputValidation.user_email && `border-red-600 border-2`}`}
+                  />
+                </div>
+
               </div>
 
             </div>
-            <div>
-              <label htmlFor="email" className={contactLabelStyle}>
-                Email:
-              </label>
-              <div className="mt-2.5 mb-2.5">
-                <input
-                  id="user-email"
-                  name="user_email"
-                  type="text"
-                  autoComplete="email"
-                  className={contactInputStyle}
-                />
-              </div>
-
-            </div>
-
-          </div>
-          <label htmlFor="message" className="block text-sm font-semibold leading-6">
-            Message:
-          </label>
-          <div className="mt-2.5">
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              className={contactInputStyle}
-              defaultValue={''}
-            />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2">
-            <div className='pt-3'>
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={RECAPTCHA_SITE}
-                onChange={handleRecaptcha}
+            <label htmlFor="message" className="block text-sm font-semibold leading-6">
+              Message: {inputValidation.message && <span className='text-red-600'> **Required field**</span>}
+            </label>
+            <div className="mt-2.5">
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                onChange={handleInputChange}
+                className={`${contactInputStyle} ${inputValidation.message && `border-red-600 border-2`}`}
+                defaultValue={''}
               />
             </div>
+            <div className="grid grid-cols-1 xl:grid-cols-2">
+              <div className='pt-3 flex justify-center'>
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={RECAPTCHA_SITE}
+                  onChange={handleRecaptcha}
+                />
+              </div>
 
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={contactButtonStyle}
-            >
-              Send
-            </button>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={contactButtonStyle}
+              >
+                Send
+              </button>
+            </div>
           </div>
-        </div>
+        }
       </div>
     </form>
   )
