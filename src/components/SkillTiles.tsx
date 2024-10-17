@@ -16,32 +16,32 @@ type SkillArrayType = {
 const skillArray: SkillArrayType = [
   {
     name: "React",
-    href: "/react",
+    href: "/skills/react",
     img: reactLogo,
   },
   {
     name: "Typescript",
-    href: "/typescript",
+    href: "/skills/typescript",
     img: tsLogo,
   },
   {
     name: "Nodejs",
-    href: "/nodejs",
+    href: "/skills/nodejs",
     img: nodeLogo,
   },
   {
     name: "Unit Testing",
-    href: "/unittest",
+    href: "/skills/unittest",
     img: unitLogo,
   },
   {
     name: "HTML/CSS",
-    href: "/htmlcss",
+    href: "/skills/htmlcss",
     img: htmlLogo,
   },
   {
     name: "Web services/API",
-    href: "/webapi",
+    href: "/skills/webapi",
     img: apiLogo,
   },
 ]
@@ -52,12 +52,12 @@ export default function SkillTiles() {
     <div className="container md:mx-auto max-w-screen-xl p-16 sm:p-5 xl:p-0">
       <section className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-3 mt-10">
 
-        {skillArray.map((element) => {
-          return (<Link to={element.href}>
+        {skillArray.map((element, idx) => {
+          return (<Link key={`id_${idx}`} to={element.href}>
             <div className="transform transition duration-200 hover:scale-105 hover:animate-pulse border-4 w-full h-0 pb-full  border-cyan-line main-tiles bg-main-tiles">
               <div className="p-3 text-center">
                 <img src={element.img} />
-                <p className="mt-5 reactP sm:">{element.name}</p>
+                <p className="mt-5 font-Bowlby uppercase text-3xl">{element.name}</p>
               </div>
             </div>
           </Link>)
