@@ -11,12 +11,12 @@ export default function Header(){
           </div>
           <div className="grid md:col-span-2 pl-5 xl:pl-0">
             <div className="border-b-4  border-cyan-line">
-              <h1 className="font-bold font-Bowlby">
+              <h1 className="font-bold font-Bowlby text-3xl sm:text-5xl">
                 MARK FARRELL.
               </h1>
             </div>
             <div className="h-80px">
-              <h2 className="font-Bowlby mt-3 ">
+              <h2 className="font-Bowlby mt-3 text-3xl sm:text-4xl">
                 SOFTWARE ENGINEER
               </h2>
             </div>
