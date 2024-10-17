@@ -1,7 +1,9 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import Home from '@/view/Home'
-import Skills from '@/view/Skills'
-import ReactSkill from "@/components/ReactSkill";
+import Home from '@/pages/Home'
+import Skills from '@/pages/Skills'
+import ReactSkill from "@/view/ReactSkill";
+import TypescriptSkill from "@/view/TypescriptSkill";
+import NodejsSkill from "@/view/NodejsSkill";
 
 export default function Router() {
   return (
@@ -18,6 +20,14 @@ export default function Router() {
           <Route
             path="react"
             element={<ReactSkill />}
+          />
+          <Route
+            path="typescript"
+            element={<TypescriptSkill />}
+          />
+          <Route
+            path="nodejs"
+            element={<NodejsSkill />}
           />
         </Route>
       </Routes>

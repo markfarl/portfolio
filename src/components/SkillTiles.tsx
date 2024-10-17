@@ -1,51 +1,5 @@
+import { skillArray } from "@/constants/skillsArray"
 import { Link } from "react-router-dom"
-import reactLogo from "@/assets/react.png"
-import tsLogo from "@/assets/typescript.png"
-import nodeLogo from "@/assets/nodejs.png"
-import unitLogo from "@/assets/unittest.png"
-import htmlLogo from "@/assets/htmlcss.png"
-import apiLogo from "@/assets/webapi.png"
-
-
-type SkillArrayType = {
-  name: string,
-  href: string,
-  img: string
-}[]
-
-const skillArray: SkillArrayType = [
-  {
-    name: "React",
-    href: "/skills/react",
-    img: reactLogo,
-  },
-  {
-    name: "Typescript",
-    href: "/skills/typescript",
-    img: tsLogo,
-  },
-  {
-    name: "Nodejs",
-    href: "/skills/nodejs",
-    img: nodeLogo,
-  },
-  {
-    name: "Unit Testing",
-    href: "/skills/unittest",
-    img: unitLogo,
-  },
-  {
-    name: "HTML/CSS",
-    href: "/skills/htmlcss",
-    img: htmlLogo,
-  },
-  {
-    name: "Web services/API",
-    href: "/skills/webapi",
-    img: apiLogo,
-  },
-]
-
 
 export default function SkillTiles() {
   return (

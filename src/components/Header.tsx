@@ -22,9 +22,9 @@ export default function Header(){
             </div>
             <div className="md:w-10/12">
               <p className="mt-3">Software Engineer with over 10 years industry experience.
-                I build out responsive and web applications currently using React, Typescript, Tailwind CSS and Vite, with experience in many other frontend frameworks and libraries.
-                I also have experience developing endpoints and integration with cloud applications.</p>
-              <p className="mt-3">Check out my previous experience and projects below.</p>
+              I build out responsive and dynamic web applications currently using React, Typescript, Tailwind CSS with Vite/Vitest. 
+              But I also have experience in lots of other frontend frameworks and libraries and developing Node.js server side endpoints integrating with cloud applications.</p>
+              <p className="mt-3">Check out my previous projects below! **Under construction**</p>
             </div>
           </div>
           <div className="flex justify-center mt-10 md:mt-0 items-center">
