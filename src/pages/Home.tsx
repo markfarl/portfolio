@@ -1,8 +1,5 @@
-import ContactForm from "@/components/ContactForm"
 import SkillTiles from "@/components/SkillTiles"
-import { Link } from "react-router-dom"
 import Header from "@/components/Header"
-
 
 export default function Home() {
 

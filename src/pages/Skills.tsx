@@ -1,4 +1,3 @@
-import ContactForm from "@/components/ContactForm"
 import { skillArray } from "@/constants/skillsArray"
 import { useLocation } from 'react-router-dom'
 import { Link, Outlet } from "react-router-dom"
