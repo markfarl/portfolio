@@ -23,7 +23,7 @@ export default function Header(){
             <div className="md:w-10/12">
               <p className="mt-3">Software Engineer with over 10 years industry experience.
               I build out responsive and dynamic web applications currently using React, Typescript, Tailwind CSS with Vite/Vitest. 
-              But I also have experience in lots of other frontend frameworks and libraries and developing Node.js server side endpoints integrating with cloud applications.</p>
+              I have used lots of other frontend frameworks and libraries too and projects requiring development of Node.js server side endpoints to integrate with cloud applications.</p>
               <p className="mt-3">Check out my previous projects below! **Under construction**</p>
             </div>
           </div>
