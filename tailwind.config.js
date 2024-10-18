@@ -22,7 +22,8 @@ export default {
         'cyan-line': '#00ffeb'
       },
       height: {
-        '80px': '80px'
+        '80px': '80px',
+        '20px': '20px'
       },
       fontFamily: {
         'Bowlby': 'Bowlby One SC',

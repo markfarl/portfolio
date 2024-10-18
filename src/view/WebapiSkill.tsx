@@ -1,4 +1,4 @@
-export default function NodejsSkill() {
+export default function WebapiSkill() {
     return (
         <div className="p-5">
             <p className="mb-5">Lorem ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum</p>

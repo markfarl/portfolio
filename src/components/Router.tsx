@@ -4,6 +4,9 @@ import Skills from '@/pages/Skills'
 import ReactSkill from "@/view/ReactSkill";
 import TypescriptSkill from "@/view/TypescriptSkill";
 import NodejsSkill from "@/view/NodejsSkill";
+import TestingSkill from "@/view/TestingSkill";
+import HtmlcssSkill from "@/view/HtmlcssSkill";
+import WebapiSkill from "@/view/WebapiSkill";
 
 export default function Router() {
   return (
@@ -28,6 +31,18 @@ export default function Router() {
           <Route
             path="nodejs"
             element={<NodejsSkill />}
+          />
+          <Route
+            path="unittest"
+            element={<TestingSkill />}
+          />
+          <Route
+            path="htmlcss"
+            element={<HtmlcssSkill />}
+          />
+          <Route
+            path="webapi"
+            element={<WebapiSkill />}
           />
         </Route>
       </Routes>

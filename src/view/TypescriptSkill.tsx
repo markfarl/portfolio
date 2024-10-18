@@ -1,15 +1,17 @@
-export default function TypescriptSkill(){
-    return(
+export default function TypescriptSkill() {
+    return (
         <div className="p-5">
-        <p className="mb-5">I have used React consistently in my professional career, from building out complex interfaces to manipulating large backend data storage to creating components for data tracking. Not including working with other UI JS libraries like Angular.js and Ember as well as mobile libraries such as React Native and Ionic 
-        </p>
-        <p className="mb-5">Some recent projects include:</p>
-        <ul className="ml-10 list-disc">
-            <li>Beyond 2022 ADAPT Centre</li>
-            <li>React native Android application</li>
-            <li>Shutterstock internal analytics tooling</li>
-            <li>Shutterstock main site</li>
-        </ul>
+            <p className="mb-5">I like to use Typescript with all my javascript code, this includes typing for basic types, function types, generics and other advanced typescript concepts.
+
+            </p>
+            <p>A well typed application is more efficient for developing and can negate the need for certain unit tests, unit tests centred around more tedious logic checks which can be caught by the Typescript compiler.
+            </p>
+            <p className="mb-5">Some recent projects include:</p>
+            <ul className="ml-10 list-disc">
+                <li>Shutterstock public facing website and subsidiaries</li>
+                <li>Shutterstock internal tooling built in React and Nodejs</li>
+                <li>This portfolio! here</li>
+            </ul>
         </div>
     )
 }

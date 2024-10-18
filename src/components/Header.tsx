@@ -6,7 +6,7 @@ export default function Header(){
     return (
         <header className="container md:mx-auto max-w-screen-xl bg-header-bk bg-left">
         <div className="grid md:grid-cols-3 items-start">
-          <div className="md:col-span-3 h-80px">
+          <div className="md:col-span-3 h-20px md:h-80px">
 
           </div>
           <div className="grid md:col-span-2 pl-5 xl:pl-0">
@@ -16,7 +16,7 @@ export default function Header(){
               </h1>
             </div>
             <div className="h-80px">
-              <h2 className="font-Bowlby mt-3 text-3xl sm:text-4xl">
+              <h2 className="font-Bowlby mt-3 text-2xl sm:text-4xl">
                 SOFTWARE ENGINEER
               </h2>
             </div>
@@ -24,7 +24,8 @@ export default function Header(){
               <p className="mt-3">Software Engineer with over 10 years industry experience.
               I build out responsive and dynamic web applications currently using React, Typescript, Tailwind CSS with Vite/Vitest. 
               I have used lots of other frontend frameworks and libraries too and projects requiring development of Node.js server side endpoints to integrate with cloud applications.</p>
-              <p className="mt-3">Check out my previous projects below! **Under construction**</p>
+              <p className="mt-3">Check out my previous projects below! </p>
+              <p><b>**Still Under construction**</b></p>
             </div>
           </div>
           <div className="flex justify-center mt-10 md:mt-0 items-center">

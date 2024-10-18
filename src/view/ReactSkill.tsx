@@ -1,14 +1,35 @@
 export default function ReactSkill() {
     return (
         <div className="p-5">
-            <p className="mb-5">I have used React consistently in my professional career, from building out complex interfaces to manipulating large backend data storage to creating components for data tracking. Not including working with other UI JS libraries like Angular.js and Ember as well as mobile libraries such as React Native and Ionic
+            <p className="mb-5">I have used React consistently in my career, from building out complex interfaces for manipulating large data schemas to creating components for user tracking. Not including working with other UI JS libraries like Angular.js and Ember as well as mobile libraries such as React Native and Ionic
             </p>
-            <p className="mb-5">Some recent projects include:</p>
+            <p className="mb-5">Some recent React projects include:</p>
+            <ul className="mb-5 ml-10 list-disc">
+                
+                <li>Shutterstock internal tooling built in React and Nodejs
+                    <ul className="mb-5 ml-10 list-disc italic">
+                        <li>
+                            Nestjs, materialUI, Tailwind CSS, Jest
+                        </li>
+                    </ul>
+                </li>
+                <li>Shutterstock public facing website and subsidiaries
+                    <ul className="mb-5 ml-10 list-disc italic">
+                        <li>
+                            Redux, Nextjs, materialUI, Jest
+                        </li>
+                    </ul>
+                </li>
+                <li>Beyond 2022 ADAPT Centre <a>here</a></li>
+                <li>React native Android application <a>here</a></li>
+            </ul>
+            <p className="mb-5">Some older projects</p>
             <ul className="ml-10 list-disc">
-                <li>Beyond 2022 ADAPT Centre</li>
-                <li>React native Android application</li>
-                <li>Shutterstock internal analytics tooling</li>
-                <li>Shutterstock main site</li>
+                <li>Bigfoot mobile application 2017, ADAPT
+                    <ul className="mb-5 ml-10 list-disc italic">
+                        <li>AngularJS, Ionic</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     )
