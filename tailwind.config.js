@@ -11,15 +11,36 @@ export default {
         full: '100%',
       },
       backgroundImage: {
-        'header-bk': "url(/src/assets/headerBk.png)"
+        'header-bk-normal': "url(/src/assets/headerBk.png)",
+        'header-bk-solar': "url(/src/assets/headerBk-solar.png)",
+        'header-bk-dark': "url(/src/assets/headerBk-dark.png)",
+        'header-bk-light': "url(/src/assets/headerBk-light.png)",
+        'normal-gradient': "linear-gradient(to right,#0014ff 0%,#0014ff 50%,#0094ff 50%,#0094ff 100%) ",
+        'solar-gradient': "linear-gradient(to right,#fdf6e3 0%,#fdf6e3 50%,#eee8d5 50%,#eee8d5 100%) ",
+        'dark-gradient': "linear-gradient(to right,#1a1a1a 0%,#1a1a1a 50%,#212121 50%,#212121 100%) ",
+        'light-gradient': "linear-gradient(to right,#fefefe 0%,#fefefe 50%,#dedede 50%,#dedede 100%) "
       },
       backgroundColor: {
         'main-content': '#0094ff',
+        'normal-content': '#0094ff',
+        'solar-content': '#eee8d5',
+        'dark-content': '#212121',
+        'light-content': '#dedede',
         'main-tiles': '#0014ff',
-        'cyan-line': '#00ffeb'
+        'normal-tiles': '#0014ff',
+        'dark-tiles': '#1a1a1a',
+        'solar-tiles': '#fdf6e3',
+        'light-tiles': '#fefefe',
+        'cyan-line': '#00ffeb',
+        'normal-line': '#00ffeb',  
       },
       colors: {
-        'cyan-line': '#00ffeb'
+        'cyan-line': '#00ffeb',
+        'normal-line': '#00ffeb',
+        'normal2-line': '#00ffeb',
+        'solar-line': '#ac9d57',
+        'dark-line': '#007ed3',
+        'light-line': '#ff812c',
       },
       height: {
         '80px': '80px',

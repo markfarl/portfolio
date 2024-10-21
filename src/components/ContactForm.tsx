@@ -5,6 +5,8 @@ import useRecaptcha from '@/hooks/useRecaptcha';
 import { sendEmail } from '@/lib/sendEmail';
 import { RECAPTCHA_SITE } from '@/constants/email';
 import { useCookies } from 'react-cookie';
+import { useColorScheme } from "@/contexts/ColorSchemeContext"
+
 
 interface InputValType {
   user_name: boolean;
@@ -16,6 +18,7 @@ export default function ContactForm() {
   const { recaptchaRef, handleRecaptcha } = useRecaptcha();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [cookies, setCookie, removeCookie] = useCookies(['contactSet']);
+  const { colorSchemeClass } = useColorScheme()
 
   const [inputValidation, setInputValidation] = useState<InputValType>({
     user_name: false,
@@ -68,7 +71,7 @@ export default function ContactForm() {
           </p>}
 
           {stateWarning && <p className="border-4 w-full min-h-20 mt-5 bg-red-600 text-white font-bold text-xl p-5">{stateWarning}</p>}
-          {stateMessage && <p className="border-4 w-full min-h-20 mt-5 border-cyan-line text-black font-bold text-xl p-5 bg-white mb-10">{stateMessage}</p>}
+          {stateMessage && <p className={`border-4 w-full min-h-20 mt-5 ${colorSchemeClass.borderLine} text-black font-bold text-xl p-5 bg-white mb-10`}>{stateMessage}</p>}
           {(cookies.contactSet && !stateMessage) &&
             <>
               <p>Message recieved, please wait for a response shortly</p>
@@ -140,7 +143,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={contactButtonStyle}
+                className={`${colorSchemeClass.borderLine} ${contactButtonStyle}`}
               >
                 Send
               </button>

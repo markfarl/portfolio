@@ -28,7 +28,7 @@ export const skillArray: SkillArrayType = [
       img: nodeLogo,
     },
     {
-      name: "Unit Testing",
+      name: "Testing",
       href: "/skills/unittest",
       img: unitLogo,
     },
@@ -38,7 +38,7 @@ export const skillArray: SkillArrayType = [
       img: htmlLogo,
     },
     {
-      name: "Web services/API",
+      name: "services/API",
       href: "/skills/webapi",
       img: apiLogo,
     },
