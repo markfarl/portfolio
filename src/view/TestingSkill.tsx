@@ -1,13 +1,21 @@
 export default function TestingSkill() {
     return (
         <div className="p-5">
-            <p className="mb-5">Coming soon</p>
-            <p className="mb-5">Some recent projects include:</p>
+            <p className="mb-5">Testing frameworks I have worked on extensively or in some capacity:</p>
             <ul className="ml-10 list-disc">
-                <li>Project N</li>
-                <li>Project N</li>
-                <li>Project N</li>
-                <li>Project N</li>
+                <li>Unit Testing
+                    <ul className="ml-10 list-disc">
+                        <li>Jest</li>
+                        <li>Mocha</li>
+                        <li>Vitest</li>
+                    </ul>
+                </li>
+                <li>E2E
+                    <ul className="ml-10 list-disc">
+                        <li>Cypress</li>
+                        <li>Puppeteer</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     )

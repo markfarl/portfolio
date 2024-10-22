@@ -30,7 +30,6 @@ export default function Header() {
               I build out responsive and dynamic web applications currently using React, Typescript, Tailwind CSS with Vite/Vitest.
               I have used lots of other frontend frameworks and libraries too and projects requiring development of Node.js server side endpoints to integrate with cloud applications.</p>
             <p className="mt-3">Check out my previous projects below! </p>
-            <p><b>**Still Under construction**</b></p>
           </div>
         </div>
         <div className="flex justify-center mt-10 md:mt-0 items-center">
