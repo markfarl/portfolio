@@ -20,8 +20,8 @@ export default function ReactSkill() {
                         </li>
                     </ul>
                 </li>
-                <li>Beyond 2022 ADAPT Centre <a>here</a></li>
-                <li>React native Android application <a>here</a></li>
+                <li>Beyond 2022 ADAPT Centre <a href="https://github.com/markfarl/beyond2022-public-search-reactjs" target="_blank">here</a></li>
+                <li>React native Android application <a href="https://github.com/markfarl/sassy" target="_blank">here</a></li>
             </ul>
             <p className="mb-5">Some older projects</p>
             <ul className="ml-10 list-disc">
