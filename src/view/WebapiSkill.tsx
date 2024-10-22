@@ -5,6 +5,9 @@ export default function WebapiSkill() {
             <ul className="ml-10 list-disc">
                 <li>Google Tag Manager/ Analytics</li>
                 <li>Google Cloud Platform</li>
+                <li>AWS</li>
+                <li>Docker</li>
+                <li>Jenkins</li>
                 <li>One Trust (GDPR)</li>
                 <li>Firestore</li>
                 <li>Snowflake</li>
@@ -12,8 +15,6 @@ export default function WebapiSkill() {
                 <li>Hightouch</li>
                 <li>New Relic</li>
                 <li>JIRA</li>
-                <li>AWS</li>
-                <li>Docker</li>
             </ul>
         </div>
     )
