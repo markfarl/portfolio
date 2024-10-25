@@ -14,5 +14,5 @@ jobs:
             - name: Step two
               uses: actions/setup-node@v3
             - name: node install
-              run: npm ci
+              run: npm install
             - run: npm run test
