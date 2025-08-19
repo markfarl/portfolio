@@ -1,34 +1,41 @@
 export default function ReactSkill() {
   return (
     <div className="p-5">
-      <p className="mb-5">I have used React consistently in my career, from building out complex interfaces for manipulating large data schemas to creating components for user tracking. Not including working with other UI JS libraries like Angular.js and Ember as well as mobile libraries such as React Native and Ionic
+      <h2>Frontend Development & React Ecosystem Experience</h2>
+      <p className="mb-5">
+        I have extensive experience using <b>React</b> throughout my career, consistently leveraging it to build both <b>complex internal tooling</b> and <b>high‑traffic public‑facing applications</b>. My work spans creating intricate interfaces for manipulating large‑scale data schemas, designing reusable component libraries, and developing components for user tracking and analytics.
       </p>
-      <p className="mb-5">Some recent React projects include:</p>
-      <ul className="mb-5 ml-10 list-disc">
-                
-        <li>Shutterstock internal tooling built in React and Nodejs
-          <ul className="mb-5 ml-10 list-disc italic">
-            <li>
-              Nestjs, materialUI, Tailwind CSS, Jest
-            </li>
-          </ul>
+      <p className="mb-5">
+        Alongside React, I have hands‑on experience with other UI frameworks and libraries—<b>AngularJS</b>, <b>Ember</b>, <b>React Native</b>, and <b>Ionic</b>—enabling delivery across both web and mobile platforms. I’m comfortable across the broader JavaScript ecosystem, including state management, styling systems, server‑side rendering, and testing.
+      </p>
+
+
+      <h3>Selected React Projects</h3>
+      <ul className="mb-5 ml-10 list-disc italic">
+        <li>
+          <b>Shutterstock — Internal Tooling</b><br />
+          Designed and built complex internal dashboards and tools for managing and manipulating large data schemas.<br />
+          <b>Tech stack:</b> React, Node.js, NestJS, Material UI, Tailwind CSS, Jest
         </li>
-        <li>Shutterstock public facing website and subsidiaries
-          <ul className="mb-5 ml-10 list-disc italic">
-            <li>
-              Redux, Nextjs, materialUI, Jest
-            </li>
-          </ul>
+        <li>
+          <b>Shutterstock — Public‑Facing Website & Subsidiaries</b><br />
+          Developed core features for the customer‑facing platform, improving performance and accessibility while integrating with business‑critical APIs.<br />
+          <b>Tech stack:</b> React, Redux, Next.js, Material UI, Jest
         </li>
-        <li>Beyond 2022 ADAPT Centre <a href="https://github.com/markfarl/beyond2022-public-search-reactjs" target="_blank">here</a></li>
-        <li>React native Android application <a href="https://github.com/markfarl/sassy" target="_blank">here</a></li>
+        <li>
+          <b>ADAPT Centre — Beyond 2022</b><br />
+          Built and deployed a React Native Android application supporting archival research and digital heritage initiatives.<br />
+          <b>Tech stack:</b> React Native, Android
+        </li>
       </ul>
-      <p className="mb-5">Some older projects</p>
-      <ul className="ml-10 list-disc">
-        <li>Bigfoot mobile application 2017, ADAPT
-          <ul className="mb-5 ml-10 list-disc italic">
-            <li>AngularJS, Ionic</li>
-          </ul>
+
+
+      <h2>Additional Earlier Projects</h2>
+      <ul className="mb-5 ml-10 list-disc italic">
+        <li>
+          <b>Bigfoot Mobile Application (2017, ADAPT Centre)</b><br />
+          Created a cross‑platform mobile application with a focus on usability and offline‑first design.<br />
+          <b>Tech stack:</b> AngularJS, Ionic
         </li>
       </ul>
     </div>
