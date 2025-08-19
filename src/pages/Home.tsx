@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className={`transform transition duration-200 border-t-4 pb-10 ${colorSchemeClass.borderLine} ${colorSchemeClass.mainContent}`}>
+      <main className={`transform transition duration-200 border-t-2 pb-10 ${colorSchemeClass.borderLine}`}>
         <SkillTiles />
       </main>
     </>

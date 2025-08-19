@@ -66,12 +66,12 @@ export default function ContactForm() {
     <form onSubmit={handleSendEmail} >
       <div className="grid grid-cols-1 xl:p-0 sm:pt-3 p-5 gap-x-8 gap-y-6 xl:pt-3 min-h-80 sm:grid-cols-2">
         <div>
-          <h2 className="font-Bowlby uppercase">Contact Me</h2>
+          <h2 className="font-Source uppercase">Contact Me</h2>
           {!cookies.contactSet && <p>To request a resume/CV or any other enquires please fill out the contact form!
           </p>}
 
-          {stateWarning && <p className="border-4 w-full min-h-20 mt-5 bg-red-600 text-white font-bold text-xl p-5">{stateWarning}</p>}
-          {stateMessage && <p className={`border-4 w-full min-h-20 mt-5 ${colorSchemeClass.borderLine} text-black font-bold text-xl p-5 bg-white mb-10`}>{stateMessage}</p>}
+          {stateWarning && <p className="border-2 w-full min-h-20 mt-5 bg-red-600 text-white font-bold text-xl p-5">{stateWarning}</p>}
+          {stateMessage && <p className={`border-2 w-full min-h-20 mt-5 ${colorSchemeClass.borderLine} text-black font-bold text-xl p-5 bg-white mb-10`}>{stateMessage}</p>}
           {(cookies.contactSet && !stateMessage) &&
             <>
               <p>Message recieved, please wait for a response shortly</p>
