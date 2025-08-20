@@ -67,7 +67,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 xl:p-0 sm:pt-3 p-5 gap-x-8 gap-y-6 xl:pt-3 min-h-80 sm:grid-cols-2">
         <div>
           <h2 className="font-Source uppercase">Contact Me</h2>
-          {!cookies.contactSet && <p>To request a resume/CV or any other enquires please fill out the contact form!
+          {!cookies.contactSet && <p>For requests regarding my résumé/CV or any other inquiries, please complete the contact form. You are also welcome to connect with me on LinkedIn for professional networking and correspondence.
           </p>}
 
           {stateWarning && <p className="border-2 w-full min-h-20 mt-5 bg-red-600 text-white font-bold text-xl p-5">{stateWarning}</p>}
