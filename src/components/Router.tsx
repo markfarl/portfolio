@@ -7,6 +7,7 @@ import NodejsSkill from "@/view/NodejsSkill";
 import TestingSkill from "@/view/TestingSkill";
 import HtmlcssSkill from "@/view/HtmlcssSkill";
 import WebapiSkill from "@/view/WebapiSkill";
+import AISkill from "@/view/AISkill";
 
 export default function Router() {
   return (
@@ -43,6 +44,10 @@ export default function Router() {
           <Route
             path="webapi"
             element={<WebapiSkill />}
+          />
+          <Route
+            path="ai"
+            element={<AISkill />}
           />
         </Route>
       </Routes>

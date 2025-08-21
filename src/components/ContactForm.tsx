@@ -6,6 +6,7 @@ import { sendEmail } from '@/lib/sendEmail';
 import { RECAPTCHA_SITE } from '@/constants/email';
 import { useCookies } from 'react-cookie';
 import { useColorScheme } from "@/contexts/ColorSchemeContext"
+import { Link } from 'react-router-dom';
 
 
 interface InputValType {
@@ -65,7 +66,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSendEmail} >
       <div className="grid grid-cols-1 xl:p-0 sm:pt-3 p-5 gap-x-8 gap-y-6 xl:pt-3 min-h-80 sm:grid-cols-2">
-        <div>
+        <div className='flex flex-col'>
           <h2 className="font-Source uppercase">Contact Me</h2>
           {!cookies.contactSet && <p>For requests regarding my résumé/CV or any other inquiries, please complete the contact form. You are also welcome to connect with me on LinkedIn for professional networking and correspondence.
           </p>}
@@ -80,6 +81,9 @@ export default function ContactForm() {
               }}>Send another</button>
             </>
           }
+          <div className="flex-1 flex items-end ">
+            <p>©2025</p>
+          </div>
         </div>
         {(!stateMessage && !cookies.contactSet) &&
           <div>

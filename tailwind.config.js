@@ -19,7 +19,7 @@ export default {
         'solar-gradient': "linear-gradient(to right,#fdf6e3 0%,#fdf6e3 50%,rgba(33, 33, 33, 0) 50%,rgba(33, 33, 33, 0) 100%) ",
         'dark-gradient': "linear-gradient(to right,#1a1a1a 0%,#1a1a1a 50%,rgba(33, 33, 33, 0) 50%,rgba(33, 33, 33, 0) 100%) ",
         'light-gradient': "linear-gradient(to right,#fefefe 0%,#fefefe 50%,rgba(33, 33, 33, 0) 60%,rgba(33, 33, 33, 0) 100%) ",
-        'back-dark': "linear-gradient(-60deg, #1a1a1a 50%, #212121 50%)",
+        'back-dark': "linear-gradient(-60deg, #0a0a0a 50%, #212121 50%)",
         'back-light': "linear-gradient(-60deg, #fefefe 50%, #dedede 50%)",
         'back-solar': "linear-gradient(-60deg, #fdf6e3 50%, #eee8d5 50%)",
         'back-normal': "linear-gradient(-60deg, #0014ff 50%, #0094ff 50%)",

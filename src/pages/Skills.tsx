@@ -25,7 +25,7 @@ export default function Skills() {
   return (
     <>
       <Header />
-      <main className={`transform transition duration-200 border-t-2 pb-10 ${colorSchemeClass.borderLine} ${colorSchemeClass.mainContent}`}>
+      <main className={`transform transition duration-200 border-t-2 pb-10 ${colorSchemeClass.borderLine}`}>
 
         <div className="container md:mx-auto max-w-screen-xl p-8 xl:p-0">
           <section id="topRef" className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 gap-3 mt-10">

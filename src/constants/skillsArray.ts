@@ -4,6 +4,7 @@ import nodeLogo from "@/assets/nodejs.png"
 import unitLogo from "@/assets/unittest.png"
 import htmlLogo from "@/assets/htmlcss.png"
 import apiLogo from "@/assets/webapi.png"
+import aiLogo from "@/assets/ai.png"
 
 type SkillArrayType = {
   name: string,
@@ -43,9 +44,9 @@ export const skillArray: SkillArrayType = [
     img: apiLogo,
   },
   {
-    name: "services/API",
-    href: "/skills/webapi",
-    img: apiLogo,
+    name: "AI",
+    href: "/skills/ai",
+    img: aiLogo,
   },
   {
     name: "services/API",
