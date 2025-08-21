@@ -6,7 +6,6 @@ import { sendEmail } from '@/lib/sendEmail';
 import { RECAPTCHA_SITE } from '@/constants/email';
 import { useCookies } from 'react-cookie';
 import { useColorScheme } from "@/contexts/ColorSchemeContext"
-import { Link } from 'react-router-dom';
 
 
 interface InputValType {
