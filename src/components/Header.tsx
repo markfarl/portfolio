@@ -27,10 +27,9 @@ export default function Header() {
               </h2>
             </div>
             <div className="md:w-10/12">
-              <p className="mt-3">I’m a Software Engineer with over 10 years of industry experience, specializing in building responsive, dynamic, and user-friendly web applications. My current toolkit includes React, TypeScript, Tailwind CSS, and Vite/Vitest, but I’ve also worked extensively with a wide range of frontend frameworks and libraries over the years.</p>
-
+              <p className="mt-3">Hi! I’m a Software Engineer with over 10 years of industry experience, specialising in building responsive, dynamic, and user-friendly web applications. My current toolkit includes React, TypeScript, Tailwind CSS, and Vite/Vitest, but I’ve also worked extensively with a wide range of frontend frameworks and libraries over the years. I embrace AI in my development process, utilising Windsurf for my IDE configured with MCP servers.</p> 
               <p className="mt-3"> Beyond the frontend, I’ve developed Node.js backend services and APIs, integrating with cloud platforms to deliver scalable and performant solutions. My experience spans the full stack, allowing me to bridge the gap between user experience and robust infrastructure.</p>
-              <p className="mt-3">In addition to software engineering, I’m proficient in multimedia tools such as Adobe Suite and have a strong understanding of Figma and modern design systems. This allows me to collaborate effectively with designers, translate creative concepts into functional interfaces, and ensure consistency across applications. My ability to bridge the gap between design and development helps deliver polished, user-focused experiences.</p>
+              <p className="mt-3">In addition to software engineering, I’m proficient in multimedia and have a strong understanding of modern design systems. This allows me to collaborate effectively with designers, translate creative concepts into functional interfaces, and ensure consistency across applications. My ability to bridge the gap between design and development helps deliver polished, user-focused experiences.</p>
               <p className="mt-3">Take a look at some of my previous projects below</p>
             </div>
           </div>
