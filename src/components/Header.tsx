@@ -22,7 +22,7 @@ export default function Header() {
               </h1>
             </div>
             <div className="h-80px">
-              <h2 className={`font-Source mt-3 ${colorSchemeClass.textColorLine} text-2xl sm:text-4xl`}>
+              <h2 className={`font-Source mt-1 ${colorSchemeClass.textColorLine} text-2xl sm:text-4xl`}>
                 SOFTWARE ENGINEER
               </h2>
             </div>

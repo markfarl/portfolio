@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Header />
       <main className={`transform transition duration-200 border-t-2 pb-10 ${colorSchemeClass.borderLine}`}>
-        <SkillTiles />
+        <SkillTiles currentTile={"/"} />
       </main>
     </>
   )
