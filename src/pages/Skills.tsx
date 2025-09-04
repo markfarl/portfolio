@@ -9,10 +9,8 @@ import SkillTiles from "@/components/SkillTiles"
 
 export default function Skills() {
   const { colorSchemeClass } = useColorScheme()
-  
-
-  const location = useLocation();
-  const navigate = useNavigate();
+  const location = useLocation()
+  const navigate = useNavigate()
 
   // On route change, scroll slightly above the anchor
   useEffect(() => {
@@ -62,7 +60,6 @@ export default function Skills() {
             className={`overflow-hidden border-2 ${colorSchemeClass.borderLine} ${colorSchemeClass.tilesBk} ${isLeaving ? "animate-out fade-out slide-out-to-top duration-200" : (isAnimatingIn ? "animate-in fade-in slide-in-from-top duration-500" : "transform transition duration-200")} grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 gap-3`}
           >
             <div className={` row-span-3 sm:col-span-3  main-tiles `}>
-
               <Outlet />
             </div>
 
@@ -71,8 +68,6 @@ export default function Skills() {
             )}
 
           </section>
-
-
         </div>
         <SkillTiles currentTile={location.pathname} />
       </main>
